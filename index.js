@@ -2,49 +2,83 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 // TODO: Create an array of questions for user input
+// reference: https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
 const questions = [
     {
-      type: 'input',
-      name: 'title',
-      message: 'What is the title of your application?',
+        type: 'input',
+        name: 'title',
+        message: 'What is the title of your application?',
     },
     {
-      type: 'input',
-      name: 'description',
-      message: '',
-    //   How do I add more questions to the description section?
-    // 'How do you use your application?
+        type: 'input',
+        name: 'description',
+        message: 'What was your motivation to make this application?',
+        //   How do I add more questions to the description section?
+        // 'Why did you build this application?'
+        // 'What problem does this application solve?'
+        // 'What did you learn from creating this application?'
     },
     {
-      type: 'input',
-      name: 'hobby',
-      message: 'What is your favorite hobby?',
+        type: 'input',
+        name: 'installation',
+        message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
     },
     {
-      type: 'input',
-      name: 'food',
-      message: 'What is your favorite food?',
+        type: 'input',
+        name: 'usage',
+        message: 'What are the instructions for use? Provide examples.',
+        //   Is there a way for users to upload screenshots?
     },
     {
-      type: 'input',
-      name: 'github',
-      message: 'Enter your GitHub Username',
+        type: 'input',
+        name: 'credits',
+        message: 'List your collaborators, if any, with links to their GitHub profiles.',
+        //   Extra to add to this section if possible
+        // If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section. 
+        // If you followed tutorials, include links to those as well.
     },
     {
-      type: 'input',
-      name: 'linkedin',
-      message: 'Enter your LinkedIn URL.',
+        type: 'input',
+        name: 'license',
+        message: 'Choose a license.',
+        // create a drop down menu with list of options [https://choosealicense.com/](https://choosealicense.com/)
+        // add badge to corresponding license to the top of the README 
+        // include a notice to section that explains which license the application is covered under
     },
-  ];
-
-  inquirer.createPromptModule(questions)
+    {
+        type: 'input',
+        name: 'features',
+        message: 'List the features of your application.',
+    },
+    {
+        type: 'input',
+        name: 'contributions',
+        message: 'Enter guidelines for developers to contribute to your application.',
+        // If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/)
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'Write a test for your application and include examples on how to run them.',
+    },
+    {
+        type: 'input',
+        name: 'questions',
+        message: 'Enter instructions on how to reach you if there are additional questions.',
+        // additional messages to add:
+            // 'What is your email address?'
+            // 'Enter the link to your GitHub profile.'
+        },
+];
+// to reference: https://www.npmjs.com/package/inquirer
+inquirer.createPromptModule(questions)
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) { }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() { }
 
 // Function call to initialize app
 init();
