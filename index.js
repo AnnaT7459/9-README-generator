@@ -52,7 +52,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'testing',
+        name: 'tests',
         message: 'Write a test for your application and include examples on how to run them.',
     },
     {
@@ -68,7 +68,7 @@ inquirer.createPromptModule(questions)
 // TODO: Create a function to write README file
 // reference: https://nodejs.org/en/learn/manipulating-files/writing-files-with-nodejs
 const fileName = README.md;
-const generateREADME = ({ title, description, installation, usage, license, contributions testing, questions }) 
+const generateREADME = ({ title, description, installation, usage, license, contributions, tests, questions }) 
 
 function writeToFile(fileName, generateREADME) {
     fs.writeToFile(fileName, generateREADME, err => {
