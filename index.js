@@ -1,3 +1,4 @@
+// *add footer/caption that README for this project was made with the generator
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
@@ -13,7 +14,7 @@ const questions = [
         type: 'input',
         name: 'description',
         message: 'What was your motivation to make this application?',
-        //   How do I add more questions to the description section?
+        //   *How do I add more questions to the description section? make into 1 describe your project
         // 'Why did you build this application?'
         // 'What problem does this application solve?'
         // 'What did you learn from creating this application?'
@@ -27,16 +28,14 @@ const questions = [
         type: 'input',
         name: 'usage',
         message: 'What are the instructions for use? Provide examples.',
-        //   Is there a way for users to upload screenshots?
+        //   Is there a way for users to upload screenshots? input path to file *future development*
     },
-    {
-        type: 'input',
-        name: 'credits',
-        message: 'List your collaborators, if any, with links to their GitHub profiles.',
-        //   Extra to add to this section if possible
-        // If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section. 
-        // If you followed tutorials, include links to those as well.
-    },
+    // *FUTURE DEVELOPMENT TO GENERATE CREDITS IN APA FORMAT
+    // {
+    //     type: 'input',
+    //     name: 'credits',
+    //     message: 'List your collaborators, if any, with links to their GitHub profiles., If you used any    third-party assets that require attribution, list the creators with links to their primary web presence in this section., If you followed tutorials, include links to those as well.
+    // },
     {
         type: 'input',
         name: 'license',
@@ -44,11 +43,6 @@ const questions = [
         // create a drop down menu with list of options [https://choosealicense.com/](https://choosealicense.com/)
         // add badge to corresponding license to the top of the README 
         // include a notice to section that explains which license the application is covered under
-    },
-    {
-        type: 'input',
-        name: 'features',
-        message: 'List the features of your application.',
     },
     {
         type: 'input',
@@ -64,11 +58,8 @@ const questions = [
     {
         type: 'input',
         name: 'questions',
-        message: 'Enter instructions on how to reach you if there are additional questions.',
-        // additional messages to add:
-            // 'What is your email address?'
-            // 'Enter the link to your GitHub profile.'
-        },
+        message: 'Enter your email address and GitHub username link for developers to contact you with additional questions.',
+    },
 ];
 // to reference: https://www.npmjs.com/package/inquirer
 inquirer.createPromptModule(questions)
@@ -76,6 +67,7 @@ inquirer.createPromptModule(questions)
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) { }
+
 
 // TODO: Create a function to initialize app
 function init() { }
@@ -85,7 +77,7 @@ init();
 
 
 
-// const generateHTML = ({ name, location, github, linkedin }) =>
+// const generateREADME = ({ title, description, installation, usage, license, contributions test, questions }) =>
 //   `<!DOCTYPE html>
 // <html lang="en">
 // <head>
@@ -109,39 +101,7 @@ init();
 // </body>
 // </html>`;
 
-// inquirer
-//   .prompt([
-//     {
-//       type: 'input',
-//       name: 'name',
-//       message: 'What is your name?',
-//     },
-//     {
-//       type: 'input',
-//       name: 'location',
-//       message: 'Where are you from?',
-//     },
-//     {
-//       type: 'input',
-//       name: 'hobby',
-//       message: 'What is your favorite hobby?',
-//     },
-//     {
-//       type: 'input',
-//       name: 'food',
-//       message: 'What is your favorite food?',
-//     },
-//     {
-//       type: 'input',
-//       name: 'github',
-//       message: 'Enter your GitHub Username',
-//     },
-//     {
-//       type: 'input',
-//       name: 'linkedin',
-//       message: 'Enter your LinkedIn URL.',
-//     },
-//   ])
+
 //   .then((answers) => {
 //     const htmlPageContent = generateHTML(answers);
 
