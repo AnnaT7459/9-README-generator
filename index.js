@@ -3,10 +3,10 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-const generateREADME = ({ title, description, installation, usage, license, contributions, tests, questions }) => `# ${answers.title}
+const generateREADME = ({ title, description, installation, usage, license, contributions, tests, questions }) => `# ${title}
 
 ## Description
-${answers.description}
+${description}
 
 ## Table of Contents
 - [Installation](#installation)
@@ -17,22 +17,22 @@ ${answers.description}
 - [Questions](#questions)
 
 ## Installation
-${answers.installation}
+${installation}
 
 ## Usage
-${answers.usage}
+${usage}
 
 ## License
-This project is licensed under the terms of the ${answers.license} license.
+This project is licensed under the terms of the ${license} license.
 
 ## Contributions
-${answers.contributions}
+${contributions}
 
 ## Tests
-${answers.tests}
+${tests}
 
 ## Questions
-For any questions, please contact [${answers.questions}](mailto:${answers.questions}).
+For any questions, please contact [${questions}](mailto:${questions}).
 
 ---
 
