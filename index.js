@@ -32,7 +32,7 @@ ${contributions}
 ${tests}
 
 ## Questions
-For any questions, please contact [${questions}](mailto:${questions}).
+For any questions, please contact me at ${questions}
 
 ---
 
@@ -51,16 +51,12 @@ function init() {
             {
                 type: 'input',
                 name: 'description',
-                message: 'What was your motivation to make this application?',
-                //   *How do I add more questions to the description section? make into 1 describe your project
-                // 'Why did you build this application?'
-                // 'What problem does this application solve?'
-                // 'What did you learn from creating this application?'
+                message: 'Describe your application. (What was your motivation? Why did you build it? What problem does it solve? What did you learn from creating it?)',
             },
             {
                 type: 'input',
                 name: 'installation',
-                message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
+                message: 'What are the steps required to install your application? Provide a step-by-step description of how to get the development environment running.',
             },
             {
                 type: 'input',
@@ -86,7 +82,7 @@ function init() {
                 type: 'input',
                 name: 'contributions',
                 message: 'Enter guidelines for developers to contribute to your application.',
-                // If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/)
+                // If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The Contributor Covenant (https://www.contributor-covenant.org/) is an industry standard.
             },
             {
                 type: 'input',
@@ -111,7 +107,7 @@ function init() {
         .then((answers) => {
             const READMEcontent = generateREADME(answers);
 
-            fs.writeToFile('README.md', READMEcontent, (err) =>
+            fs.writeFile('README.md', READMEcontent, (err) =>
                 err ? console.log(err) : console.log('Successfully created README.md!')
             );
         });
