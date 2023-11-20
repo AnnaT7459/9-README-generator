@@ -2,9 +2,47 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+
+const generateREADME = ({ title, description, installation, usage, license, contributions, tests, questions }) =>
+`# ${answers.title}
+
+## Description
+${answers.description}
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributions](#contributions)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Installation
+${answers.installation}
+
+## Usage
+${answers.usage}
+
+## License
+This project is licensed under the terms of the ${answers.license} license.
+
+## Contributions
+${answers.contributions}
+
+## Tests
+${answers.tests}
+
+## Questions
+For any questions, please contact [${answers.questions}](mailto:${answers.questions}).
+
+---
+
+*This README was generated with a README generator.*`
+ 
 // TODO: Create an array of questions for user input
 // reference: https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
-const questions = [
+inquirer
+    .prompt ([
     {
         type: 'input',
         name: 'title',
@@ -30,7 +68,7 @@ const questions = [
         message: 'What are the instructions for use? Provide examples.',
         //   Is there a way for users to upload screenshots? input path to file *future development*
     },
-    // *FUTURE DEVELOPMENT TO GENERATE CREDITS IN APA FORMAT
+    // *FUTURE DEVELOPMENT TO GENERATE CREDITS IN APA FORMAT*
     // {
     //     type: 'input',
     //     name: 'credits',
@@ -60,15 +98,20 @@ const questions = [
         name: 'questions',
         message: 'Enter your email address and GitHub username link for developers to contact you with additional questions.',
     },
-];
-// to reference: https://www.npmjs.com/package/inquirer
-inquirer.createPromptModule(questions)
+]);
+//   .then((answers) => {
+//     const READMEcontent = generateREADME(answers);
+
+//     fs.writeFile('index.html', htmlPageContent, (err) =>
+//       err ? console.log(err) : console.log('Successfully created index.html!')
+//     );
+//   });
 
 
 // TODO: Create a function to write README file
 // reference: https://nodejs.org/en/learn/manipulating-files/writing-files-with-nodejs
 const fileName = README.md;
-const generateREADME = ({ title, description, installation, usage, license, contributions, tests, questions }) 
+
 
 function writeToFile(fileName, generateREADME) {
     fs.writeToFile(fileName, generateREADME, err => {
