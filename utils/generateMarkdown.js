@@ -1,6 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-// referene: H. Burke - personal communication 11.19.23, https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+// reference: H. Burke - personal communication 11.19.23, https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 function renderLicenseBadge(license) {
   if (!license) {
     console.log('No license chosen');
@@ -71,10 +71,9 @@ This application is licensed under the terms of the [${license}](${licenseLink})
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-
-`;
+function generateMarkdown(answers) {
+  return `# ${answers.title}
+${renderLicenseSection(answers.license)}`;
 }
 
 module.exports = generateMarkdown;

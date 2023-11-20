@@ -1,4 +1,4 @@
-# something
+# my project
 
 ## Description
 i like it
@@ -15,19 +15,19 @@ i like it
 n/a
 
 ## Usage
-n/a
+none
 
 ## License
-This project is licensed under the terms of the mit license.
+This project is licensed under the terms of the drop down menu here license.
 
 ## Contributions
-website
+do whatever you want
 
 ## Tests
-n/s
+test test test
 
 ## Questions
-For any questions, please contact [annaeturner259@gmail.com https://github.com/AnnaT7459](mailto:annaeturner259@gmail.com https://github.com/AnnaT7459).
+For any questions, please contact me at annaeturner@gmail.com https://github.com/AnnaT7459
 
 ---
 
