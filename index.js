@@ -3,6 +3,10 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
+// reference for TOC links: https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents
+// # My Table of content
+// - [Section 1](#id-section1)
+// - [Section 2](#id-section2)
 const generateREADME = ({ title, description, installation, usage, license, contributions, tests, questions }) => `# ${title}
 
 ## Description
@@ -36,9 +40,10 @@ For any questions, please contact me at ${questions}
 
 ---
 
-*This README was generated with a README generator.*`;
+*This README was generated with a README generator*`;
 // TODO: Create a function to initialize app
 function init() {
+
     // TODO: Create an array of questions for user input
     // reference: https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
     inquirer
@@ -71,12 +76,14 @@ function init() {
             //     message: 'List your collaborators, if any, with links to their GitHub profiles., If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section., If you followed tutorials, include links to those as well.
             // },
             {
-                type: 'input',
+                type: 'list',
                 name: 'license',
+                choices: ['Apache License 2.0','GNU General Public License','MIT License','BSD 2-Clause "Simplified" License','BSD 3-Clause "New" or "Revised" License','Boost Software License 1.0','Creative Commons Zero v1.0 Universal','Eclipse Public License 2.0','GNU Affero General Public License v3.0','GNU General Public License v2.0','Mozilla Public License 2.0','The Unlicense'],
                 message: 'Choose a license.',
-                // create a drop down menu with list of options [https://choosealicense.com/](https://choosealicense.com/)
-                // add badge to corresponding license to the top of the README 
-                // include a notice to section that explains which license the application is covered under
+                // TO DEBUG: REPEATING CHOICES IN INTEGRATED TERMINAL
+                // create a drop down menu with list of options - used the ones in the drop down menu in GitHub repositories
+                // add badge to corresponding license to the top of the README (generateMarkdown)
+                // include a notice to section that explains which license the application is covered under (generateMarkdown)
             },
             {
                 type: 'input',
@@ -95,12 +102,13 @@ function init() {
                 message: 'Enter your email address and GitHub username link for developers to contact you with additional questions.',
             },
         ])
+
+
         // student mini project reference code
         //     fs.writeFile('index.html', htmlPageContent, (err) =>
         //       err ? console.log(err) : console.log('Successfully created index.html!')
         //     );
         //   });
-
 
         // TODO: Create a function to write README file
         // reference: https://nodejs.org/en/learn/manipulating-files/writing-files-with-nodejs
