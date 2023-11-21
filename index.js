@@ -2,7 +2,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-
+const renderLicenseSection = require('./utils/generateMarkdown')
 // reference for TOC links: https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents
 // # My Table of content
 // - [Section 1](#id-section1)
@@ -26,8 +26,7 @@ ${installation}
 ## Usage
 ${usage}
 
-## License
-This project is licensed under the terms of the ${license} license.
+${renderLicenseSection(license)}
 
 ## Contributions
 ${contributions}

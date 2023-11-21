@@ -64,16 +64,15 @@ const licenseLink = renderLicenseLink(license);
 return `
 ## License
 
-This application is licensed under the terms of the [${license}](${licenseLink}) license.
-
-[![License Badge](${licenseBadge})](${licenseLink})
+This application is licensed under the terms of the ![${license}](${licenseBadge}) license.
+[License Terms](${licenseLink})
 `;
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(answers) {
-  return `# ${answers.title}
-${renderLicenseSection(answers.license)}`;
-}
+// function generateMarkdown(answers) {
+//   return `# ${answers.title}
+// ${renderLicenseSection(answers.license)}`;
+// }
 
-module.exports = generateMarkdown;
+module.exports = renderLicenseSection;
