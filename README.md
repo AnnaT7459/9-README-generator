@@ -1,38 +1,31 @@
-# README Generator
+# Book Search Engine Refactor
 
 ## Description
-As a developer, I want a README generator so that I can quickly create a professional README for a new project. I learned a lot using Node.js including inquirer, file system to write files based on user input, render and initializing functions, then statements, and using the integrated terminal is VS Code.
+As an avid reader, I want to search for new books to read so that I can keep a list of books to purchase.Through this MERN challenge, I was able to apply and improve upon my skills of using middlewae to work with the GraphQL API. I became more familiar with the Apollo Server and became more confident in my abilities to define queries and mutations.
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
 - [Contributions](#contributions)
 - [Tests](#tests)
 - [Questions](#questions)
 
 ## Installation
-You will need VS Code, install Node.js, and create a package.json file before installing dependencies like file system and inquirer package (8.2.4).
+N/A
 
 ## Usage
-Answer the prompts in the integrated terminal
-https://drive.google.com/file/d/1wbnfVRbdI_r2iDJnnHqr-quepi4wCD_T/view
+Simply search for books and login or signup in order to save and delete books to and from your book list.
 
-
-## License
-
-This application is licensed under the terms of the ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg) license.
-[License Terms](https://opensource.org/licenses/MIT)
-
+https://ancient-peak-54672-ee0659bdc44a.herokuapp.com/
 
 ## Contributions
-Please see https://www.contributor-covenant.org/
+N/A
 
 ## Tests
 N/A
 
 ## Questions
-For any questions, please contact me at annaeturner259@gmail.com or https://github.com/AnnaT7459
+For any questions, please contact me at annaeturner259@gmail.com OR https://github.com/AnnaT7459
 
 ---
 
